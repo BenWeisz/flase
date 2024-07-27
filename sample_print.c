@@ -16,7 +16,7 @@ FLASE_DEFINE_TEST( simple )
 
 FLASE_DEFINE_TEST( apples )
 {
-	FLASE_ASSERT( 1 < 2, "Nope" );
+	FLASE_ASSERT( 1 < 2, "Correcto" );
 	FLASE_ASSERT( 2 > 1, "Yes" );
 }
 
