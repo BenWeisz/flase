@@ -39,9 +39,8 @@ Building `sample.c` and running it we get the following output: (with nice color
 ```diff
 FLASE Run Test: simple
 	Failed: Whoopsie, sample.c:5
-FLASE Report: simple | FAIL [1/2]
-FLASE Run Test: apples
-FLASE Report: apples | PASS [2/2]
+FLASE Error Report: simple | FAIL [1/2]
+FLASE Run Test: apples | PASS [2/2]
 ```
 
 ## Without stdc
