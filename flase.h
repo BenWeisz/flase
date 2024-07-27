@@ -6,12 +6,11 @@
 #define FLASE_PRINT printf
 #endif
 
-#define FLASE_DEFINE_TEST( name ) \
-	unsigned int flase_test_an_##name = 0; \
-	unsigned int flase_test_##name( unsigned int* an_ptr, unsigned int* pn_ptr )
+#define FLASE_DEFINE_TEST( name ) void flase_test_##name( unsigned int* an_ptr, unsigned int* pn_ptr )
 
 #define FLASE_RUN_TEST( name ) \
 	({ unsigned int flase_test_pn_##name = 0; \
+		unsigned int flase_test_an_##name = 0; \
 		do { \
 			FLASE_PRINT( "FLASE Run Test: " #name "\n" ); \
 			flase_test_##name( &flase_test_an_##name, &flase_test_pn_##name ); \
