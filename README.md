@@ -49,7 +49,7 @@ You can do this by defining `FLASE_PRINT` to be the name of a function that sati
 
 This is the interface: `int printf(const char* restrict format, ...);`
 
-I would suggest externing your `custom_printf` function from whatever C file you implement it in before you include the ***flase*** header. After the extern add `#define FLASE_PRINT custom_printf` to tell ***flase*** what print function to use, the include the ***flase*** header.
+I would suggest externing your `custom_printf` function from whatever C file you implement it in before you include the ***flase*** header. After the extern, add `#define FLASE_PRINT custom_printf` to tell ***flase*** what print function to use, and then include the ***flase*** header.
 
 ## How I would set this up
 I would create one header for each regular header file from your program. Each test header can then test all of the functions / machinary that is laid out in that program header. So for example if you had a `math.h` file I would create a `tests_math.h` test file. I would then include the ***flase*** header, `math.h` along with whatever other headers you might need. 
